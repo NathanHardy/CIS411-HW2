@@ -3,6 +3,23 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="calc_styles.css">
+		
+		<script language="javascript" type="text/javascript">
+			function validateForm() {
+				var x = document.forms["feedback"]["email"].value;
+				var atpos = x.indexOf("@");
+				var dotpos = x.lastIndexOf(".");
+				if(atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+					alert("That is not a valid email address. Do not try the calculator's patience.");
+					return false;
+				}
+				var y = document.forms["feedback"]["comment"].value;
+				if(y === null || y === "") {
+					alert("We value your feedback. You will give us feedback. You do want to see your wife and children again, don't you?");
+					return false;
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<h1>Feedback</h1>
@@ -11,5 +28,13 @@
 		<a href="reg_form.html">Register</a>
 		<a href="feedback_form.html">Feedback</a>
 		<a href="faq.html">FAQs</a><br>
+		
+		<form name="feedback" onsubmit="return validateForm();">
+			<p>Email Address</p>
+			<input type="textarea" rows="1" cols="64" name="email">
+			<p>Comment(s)</p>
+			<input type="textarea" rows="25" cols="40" name="comment"><br><br>
+			<input type="submit" value="Submit">
+		</form>
 	</body>
 </html>

@@ -4,6 +4,16 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="calc_styles.css">
+		
+		<!--jabbascript bring me solo and the wookiee-->
+		<!--<script language="javascript" type="text/javascript">
+		function multiply(){
+			a=document.getElementById(number1.value);
+			b=document.getElementById(number2.value);
+			c=a*b;
+			document.calculator.total.value=c;
+		}
+		</script>-->
 	</head>
 	<body>
 		<h1>Calculator</h1>
@@ -11,7 +21,35 @@
 		<a href="calculator.html">Calculator</a>
 		<a href="reg_form.html">Register</a>
 		<a href="feedback_form.html">Feedback</a>
-		<a href="faq.html">FAQs</a><br>
+		<a href="faq.html">FAQs</a><br><br>
 		
+		<form name="calculator">
+			<textarea rows="3" cols="12" name="Input"></textarea><br>
+			<INPUT TYPE="button" NAME="clear" VALUE="C" OnClick="calculator.Input.value = ''">
+			<INPUT TYPE="button" NAME="negative" VALUE="&plusmn;" OnClick="calculator.Input.value = eval(calculator.Input.value)*-1">
+			<INPUT TYPE="button" NAME="modulus" VALUE="%" OnClick="calculator.Input.value += '%'"><br>
+			<INPUT TYPE="button" NAME="seven" VALUE="7" OnClick="calculator.Input.value += 7">
+			<INPUT TYPE="button" NAME="eight" VALUE="8" OnClick="calculator.Input.value += 8">
+			<INPUT TYPE="button" NAME="nine" VALUE="9" OnClick="calculator.Input.value += 9">
+			<INPUT TYPE="button" NAME="division" VALUE="&divide;" OnClick="calculator.Input.value += '/'">
+			<br>
+			<INPUT TYPE="button" NAME="four" VALUE="4" OnClick="calculator.Input.value += 4">
+			<INPUT TYPE="button" NAME="five" VALUE="5" OnClick="calculator.Input.value += 5">
+			<INPUT TYPE="button" NAME="six" VALUE="6" OnClick="calculator.Input.value += 6">
+			<INPUT TYPE="button" NAME="multiplication" VALUE="x" OnClick="calculator.Input.value += '*'">
+			<br>
+			<INPUT TYPE="button" NAME="one" VALUE="1" OnClick="calculator.Input.value += 1">
+			<INPUT TYPE="button" NAME="two" VALUE="2" OnClick="calculator.Input.value += 2">
+			<INPUT TYPE="button" NAME="three" VALUE="3" OnClick="calculator.Input.value += 3">
+			<INPUT TYPE="button" NAME="subtraction" VALUE="-" OnClick="calculator.Input.value += '-'">
+			<br>
+			<INPUT TYPE="button" NAME="zero" VALUE="0" OnClick="calculator.Input.value += 0">
+			<INPUT TYPE="button" NAME="decimal" VALUE="." OnClick="calculator.Input.value += .">
+			<INPUT TYPE="button" NAME="equals" VALUE="=" OnClick="calculator.Input.value = eval(calculator.Input.value)">
+			<INPUT TYPE="button" NAME="addition" VALUE="+" OnClick="calculator.Input.value += '+'">
+		</form>
+		<br>
+		<p>The developer decided that the customer would prefer retro styling.</p>
+		<p>The customer will agree if they know what's good for them.</p>
 	</body>
 </html>

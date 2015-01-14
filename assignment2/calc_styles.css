@@ -1,1 +1,36 @@
-// calc_styles
+/* calc_styles */
+body {
+	background-color: #842DCE;
+}
+a {
+	color: yellow;
+}
+p {
+	color: yellow;
+	font-family: Consolas;
+}
+h1 {
+	color: yellow;
+}
+h2 {
+	color: yellow;
+	font-family: Comic Sans MS;
+}
+textarea {
+	background-color: green;
+	color: orange;
+	font-family: Lucida Console;
+	width: 120px;
+	font-size: 18px;
+}
+input[type="button"] {
+	background-color: green;
+	color: orange;
+	font-family: Lucida Console;
+	width: 25px;
+	margin: 2px;
+	font-size: 18px;
+}
+input[value="C"] {
+	width: 58px;
+}
